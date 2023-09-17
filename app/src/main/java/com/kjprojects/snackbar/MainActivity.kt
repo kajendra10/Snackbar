@@ -7,13 +7,17 @@ import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
 
+    //INITIALIZATION
     private lateinit var btnSnackBar: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //Button declaration
         btnSnackBar = findViewById(R.id.btnSnackBar)
+
+        //Main function
         btnSnackBar.setOnClickListener {
             val snackbar = Snackbar.make(it, "KJ Projects", Snackbar.LENGTH_LONG).setAction("Action", null)
             snackbar.setActionTextColor(Color.GREEN)
